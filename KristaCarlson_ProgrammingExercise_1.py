@@ -9,7 +9,7 @@ def remaining(tickets_requested, remaining_tickets):
     return remaining_tickets
 ## Main function. Contains while loop, calls functions, validates input, tracks tickets available and buyers.
 def main ():
-    tickets_available = 20
+    tickets_available = 10
     buyers = 0
 
     while tickets_available > 0:
