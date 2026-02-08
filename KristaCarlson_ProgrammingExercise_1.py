@@ -1,6 +1,6 @@
 ## Takes user input for amount of tickets requested.
 def customer_input():
-    tickets_requested = int(input('Number of Tickets: '))
+    tickets_requested = int(input('How many tickets do you need?: '))
     return tickets_requested
 ## Keeps track of remaining tickets by subtracting user input amount.
 def remaining(tickets_requested, remaining_tickets):
