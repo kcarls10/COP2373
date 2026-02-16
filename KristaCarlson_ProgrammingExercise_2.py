@@ -5,7 +5,7 @@ def spam_email_scanner(email):
     common_keywords = [ "winner", "click here", "prize", "unsubscribe", "congratulations",
                         "pre-qualify", "account suspended", "social security", "compromised",
                         "urgent", "click below", "apply now", "limited time", "free", "cash bonus",
-                        "immediate action", "last call", "prize", "cancel now", "register now", "order now",
+                        "immediate action", "last call", "cancel now", "register now", "order now",
                         "earn money", "pre-approved", "investment", "exclusive deal", "act now", "debt",
                         "work from home", "don't delete", "cheap", "discount", "million dollars"]
 
@@ -15,7 +15,7 @@ def spam_email_scanner(email):
 
     #scan for keywords
     for word in common_keywords:
-        count = text.count(word)
+        count = len(re.findall(r'\b' + re.escape(word) + r'\b', text))
         if count > 0:
             score += count
             keywords_found.append(word)
@@ -36,9 +36,9 @@ while True:
         email += line
      except EOFError:
         break
-
+#Analyze and Return Results
 likelihood, keywords_found, score = spam_email_scanner(email)
-
+#Print Results
 print("Spam Email Scanner Results")
 print(f"Overall Spam Score: {score}")
 print(f"likely Spam Score: {likelihood}")
