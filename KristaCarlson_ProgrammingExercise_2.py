@@ -27,19 +27,22 @@ def spam_email_scanner(email):
     else:
         likelihood = "Higher than average likelihood to be spam"
     return likelihood, keywords_found, score
-
-print("Enter suspicious email: (Press CTRL+D to enter)")
-email = ""
-while True:
+def main():
+    print("Enter suspicious email: (Press CTRL+D to enter)")
+    email = ""
+    while True:
      try:
         line = input()
         email += line
      except EOFError:
         break
 #Analyze and Return Results
-likelihood, keywords_found, score = spam_email_scanner(email)
+    likelihood, keywords_found, score = spam_email_scanner(email)
 #Print Results
-print("Spam Email Scanner Results")
-print(f"Overall Spam Score: {score}")
-print(f"likely Spam Score: {likelihood}")
-print(f"Spam Keywords Found: {', '.join(keywords_found) if keywords_found else 'No keywords found'})")
+    print("Spam Email Scanner Results")
+    print(f"Overall Spam Score: {score}")
+    print(f"likely Spam Score: {likelihood}")
+    print(f"Spam Keywords Found: {', '.join(keywords_found) if keywords_found else 'No keywords found'})")
+
+if __name__ == "__main__":
+    main()
