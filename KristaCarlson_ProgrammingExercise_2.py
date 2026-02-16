@@ -13,11 +13,17 @@ def spam_email_scanner(email):
     score = 0
     keywords_found = []
 
+    #scan for keywords
     for word in common_keywords:
         count = text.count(word)
         if count > 0:
             score += count
             keywords_found.append(word)
-
+    #Spam score
     if score == 0:
-       elif score < 5
+        likelihood = "Not Likely Spam"
+    elif score < 5:
+           likelihood = "Average likelihood to be spam"
+    else:
+        likelihood = "Higher than average likelihood to be spam"
+    return likelihood, keywords_found, score
