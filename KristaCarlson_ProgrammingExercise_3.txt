@@ -1,0 +1,22 @@
+# Technical Design Document: KristaCarlson_ProgrammingExercise_3
+
+# Name: Krista Carlson
+# Date: February 22, 2026
+# Program Description: Give brief description of your program
+
+## Function: calculate_monthly_expenses
+No docstring provided.
+
+## Function: highest_monthly_expense
+No docstring provided.
+
+## Function: lowest_monthly_expense
+No docstring provided.
+
+## Function: main
+No docstring provided.
+
+## Function: monthly_expenses
+No docstring provided.
+
+# Link to your repository: https://github.com/kcarls10/COP2373/tree/master?tab=repositories
