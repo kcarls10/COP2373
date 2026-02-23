@@ -8,14 +8,14 @@ def monthly_expenses():
         if expense_type.lower() == 'done':
             break
 
-    try:
-        amount = float(input(f"Enter amount of monthly expense {expense_type}: $"))
-        expenses.append((expense_type, amount))
+        try:
+            amount = float(input(f"Enter amount of monthly expense {expense_type}: $"))
+            expenses.append((expense_type, amount))
 
-    except ValueError:
-        print("Please enter valid number")
+        except ValueError:
+            print("Please enter valid number")
 
-        return expenses
+    return expenses
 
 def calculate_monthly_expenses(expenses):
     total = reduce(lambda acc, expenses: acc + expenses[1], expenses, 0)
@@ -37,6 +37,6 @@ def main():
     print(f"highest monthly expenses: {highest[0]} -${highest[1]}")
     print(f"lowest monthly expenses: {lowest[0]} -${lowest[1]}")
 
-    if __name__ == '__main__':
+if __name__ == '__main__':
         main()
 
