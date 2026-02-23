@@ -24,3 +24,19 @@ def calculate_monthly_expenses(expenses):
 def highest_monthly_expense(expenses):
     return reduce(lambda  x, y: x if x[1] > y[1] else y, expenses)
 
+def lowest_monthly_expense(expenses):
+    return reduce(lambda  x, y: x if x[1] < y[1] else y, expenses)
+
+def main():
+    expenses = monthly_expenses()
+    total = calculate_monthly_expenses(expenses)
+    highest = highest_monthly_expense(expenses)
+    lowest = lowest_monthly_expense(expenses)
+
+    print(f"total monthly expenses: ${total}")
+    print(f"highest monthly expenses: {highest[0]} -${highest[1]}")
+    print(f"lowest monthly expenses: {lowest[0]} -${lowest[1]}")
+
+    if __name__ == '__main__':
+        main()
+
