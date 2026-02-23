@@ -1,3 +1,4 @@
+from functools import reduce
 #function for collecting and returning expenses
 def monthly_expenses():
     expenses = []
@@ -17,5 +18,9 @@ def monthly_expenses():
         return expenses
 
 def calculate_monthly_expenses(expenses):
-    total =
+    total = reduce(lambda acc, expenses: acc + expenses[1], expenses, 0)
+    return total
+
+def highest_monthly_expense(expenses):
+    return reduce(lambda  x, y: x if x[1] > y[1] else y, expenses)
 
