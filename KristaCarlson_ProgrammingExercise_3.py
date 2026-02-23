@@ -1,4 +1,14 @@
 def monthly_expenses():
     expenses = []
-    expense_type = input("Enter type of expense: :")
-    expense_type = expense_type.lower()
+
+    while True:
+        expense_type = input("Enter type of expense(type 'done' when finished): ")
+        if expense_type.lower() == 'done':
+            break
+
+    try:
+        amount = int(input("Enter amount of monthly expense: "))
+
+    except ValueError:
+        print("Please enter valid number")
+
