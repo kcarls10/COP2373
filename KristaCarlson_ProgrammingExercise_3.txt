@@ -2,21 +2,22 @@
 
 # Name: Krista Carlson
 # Date: February 22, 2026
-# Program Description: Give brief description of your program
+# Program Description: This program prompts the users to enter their monthly expenses. The program then stores the information in a list of tuples and uses the reduce function to calculate the total monthly expenses. It also returns the highest and lowest of the monthly expenses.
 
 ## Function: calculate_monthly_expenses
-No docstring provided.
+Calculates the total of all the expenses.
 
 ## Function: highest_monthly_expense
-No docstring provided.
+Uses the reduce method to compare expense amounts and keeps the highest one.
 
 ## Function: lowest_monthly_expense
-No docstring provided.
+Uses the reduce method to compare expense amounts and keeps the lowest one.
 
 ## Function: main
-No docstring provided.
+Controls the overall execution of the program by calling the input function, calling the calculation functions and printing the output.
 
 ## Function: monthly_expenses
-No docstring provided.
+Collects user input for monthly expenses. Sorts into type and amount.
+
 
 # Link to your repository: https://github.com/kcarls10/COP2373/tree/master?tab=repositories
