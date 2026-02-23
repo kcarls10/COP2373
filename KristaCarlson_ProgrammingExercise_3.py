@@ -1,3 +1,4 @@
+#function for collecting and returning expenses
 def monthly_expenses():
     expenses = []
 
@@ -7,8 +8,14 @@ def monthly_expenses():
             break
 
     try:
-        amount = int(input("Enter amount of monthly expense: "))
+        amount = float(input(f"Enter amount of monthly expense {expense_type}: $"))
+        expenses.append((expense_type, amount))
 
     except ValueError:
         print("Please enter valid number")
+
+        return expenses
+
+def calculate_monthly_expenses(expenses):
+    total =
 
