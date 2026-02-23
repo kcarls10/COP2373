@@ -34,8 +34,8 @@ def main():
     lowest = lowest_monthly_expense(expenses)
 
     print(f"total monthly expenses: ${total}")
-    print(f"highest monthly expenses: {highest[0]} -${highest[1]}")
-    print(f"lowest monthly expenses: {lowest[0]} -${lowest[1]}")
+    print(f"highest monthly expenses: {highest[0]} ${highest[1]}")
+    print(f"lowest monthly expenses: {lowest[0]} ${lowest[1]}")
 
 if __name__ == '__main__':
         main()
