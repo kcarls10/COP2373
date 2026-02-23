@@ -1,4 +1,5 @@
 from functools import reduce
+
 #function for collecting and returning expenses
 def monthly_expenses():
     expenses = []
@@ -21,12 +22,15 @@ def calculate_monthly_expenses(expenses):
     total = reduce(lambda acc, expenses: acc + expenses[1], expenses, 0)
     return total
 
+##compares expense tuples and keeps on with higher amount
 def highest_monthly_expense(expenses):
     return reduce(lambda  x, y: x if x[1] > y[1] else y, expenses)
 
+##compares expense tuples and keeps on with lower amount
 def lowest_monthly_expense(expenses):
     return reduce(lambda  x, y: x if x[1] < y[1] else y, expenses)
 
+##main function calls user input, performs calculations and displays results
 def main():
     expenses = monthly_expenses()
     total = calculate_monthly_expenses(expenses)
