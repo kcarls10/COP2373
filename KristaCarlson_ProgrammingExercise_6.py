@@ -1,14 +1,18 @@
 import re
 
+# Function to validate a phone number
 def validate_phone(phone):
     return bool(re.match(r"^\d{3}-\d{3}-\d{4}$", phone))
 
+# Function to validate a social security number
 def validate_ssn(ssn):
     return bool(re.match(r"^\d{3}-\d{2}-\d{4}$", ssn))
 
+# Function to validate a zip code
 def validate_zip(zip_code):
     return bool(re.match(r"^\d{5}$", zip_code))
 
+# Main function
 def main():
 
     phone = input("Enter a phone number: ")
@@ -30,4 +34,5 @@ def main():
     else:
         print("Zip code is not valid")
 
-main()
+if __name__ == '__main__':
+        main()
