@@ -1,28 +1,13 @@
 import re
 
 def validate_phone(phone):
-
-    pattern = re.compile("^[1-9][0-9]{9}$")
-
-    if re.match(pattern, phone):
-        return True
-    else:
-        return False
+    return bool(re.match(r"^\d{3}-\d{3}-\d{4}$", phone))
 
 def validate_ssn(ssn):
-    pattern = re.compile("^[1-9][0-9]{9}$")
-    if re.match(pattern, ssn):
-        return True
-    else:
-        return False
+    return bool(re.match(r"^\d{3}-\d{2}-\d{4}$", ssn))
 
 def validate_zip(zip_code):
-    pattern = re.compile("^[1-9][0-9]{9}$")
-    if re.match(pattern, zip_code):
-        return True
-    else:
-        return False
-
+    return bool(re.match(r"^\d{5}$", zip_code))
 
 def main():
 
@@ -42,7 +27,7 @@ def main():
 
     if validate_zip(zip_code):
         print("Zip code is valid")
-        else:
+    else:
         print("Zip code is not valid")
 
 main()
